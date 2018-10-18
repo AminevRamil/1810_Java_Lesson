@@ -1,0 +1,7 @@
+<keymap version="1" name="Default for KDE copy" parent="Default for KDE">
+  <action id="IntroduceField" />
+  <action id="IntroduceProperty" />
+  <action id="ReformatCode">
+    <keyboard-shortcut first-keystroke="ctrl alt f" />
+  </action>
+</keymap>
