@@ -1,15 +1,26 @@
 package defaultPackage;
 
-public class Chief extends Employee{
+class Chief extends Employee{
 
+    Chief(String name){
+        super(name);
+    }
 
     @Override
     void doWork() {
 
     }
 
-    void givingOrdersTo(Employee emp){
+    @Override
+    void dismission() {
 
     }
 
+    void givingOrdersTo(Employee emp){
+        emp.doWork();
+    }
+
+    void setSalaryToEmployee(Employee emp, Salary sal){
+        emp.setSalary(sal);
+    }
 }

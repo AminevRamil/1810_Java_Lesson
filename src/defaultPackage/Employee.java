@@ -1,10 +1,21 @@
 package defaultPackage;
 
 abstract class Employee {
-    private String name = "N/A";
-    private String post = "N/A";
-    private String office = "N/A";
-    private int salary = 0;
+    private final String name;
+    private String post;
+    private String office;
+    private Salary salary;
+
+    Employee(String name){
+        this.name = name;
+        post = "N/A";
+        office = "N/A";
+        salary = new Salary();
+    }
+
+    abstract void dismission();
+
+    abstract void doWork();
 
     String getName(){
         return name;
@@ -18,13 +29,23 @@ abstract class Employee {
         return office;
     }
 
-    int getSalary(){
+    Salary getSalary(){
         return salary;
     }
 
-    abstract void dismission();
+    void setPost(String post){
+        this.post = post;
+    }
 
-    abstract void doWork();
+    void setOffice(String office){
+        this.office = office;
+    }
+
+    void setSalary(Salary salary){
+        this.salary = salary;
+    }
+
+
 
 
 }
